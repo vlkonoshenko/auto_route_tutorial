@@ -1,0 +1,1 @@
+ /Users/vladkonosenko/Desktop/auto_route_tutorial/.dart_tool/flutter_build/c0e4f111384c33417caacc8dc826e79d/native_assets.yaml: 
