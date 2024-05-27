@@ -45,6 +45,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const RootScreen(),
       );
     },
+    TabWrapperRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: WrappedRoute(child: const TabWrapperScreen()),
+      );
+    },
   };
 }
 
@@ -114,6 +120,20 @@ class RootRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'RootRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [TabWrapperScreen]
+class TabWrapperRoute extends PageRouteInfo<void> {
+  const TabWrapperRoute({List<PageRouteInfo>? children})
+      : super(
+          TabWrapperRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'TabWrapperRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

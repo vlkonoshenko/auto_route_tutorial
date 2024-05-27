@@ -9,7 +9,9 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(routePage.name ?? ''),
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -17,9 +19,9 @@ class ProfileScreen extends StatelessWidget {
           Text(context.router.currentPath),
           TextButton(
               onPressed: () {
-                context.pushRoute(const HomeRoute());
+                context.router.push(const DetailsRoute());
               },
-              child: const Text('Go to First Screen'))
+              child: const Text('Go to Details Screen'))
         ],
       ),
     );

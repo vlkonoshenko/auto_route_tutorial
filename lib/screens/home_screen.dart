@@ -9,7 +9,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green.shade100,
+      appBar: AppBar(
+        title: Text(routePage.name ?? ''),
+      ),
+      backgroundColor: Colors.red.shade100,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -17,9 +20,9 @@ class HomeScreen extends StatelessWidget {
           Text(context.router.currentPath),
           TextButton(
               onPressed: () {
-                context.router.push(const CatalogRoute());
+                context.router.push(const DetailsRoute());
               },
-              child: const Text('Go to First Screen'))
+              child: const Text('Go to Details Screen'))
         ],
       ),
     );

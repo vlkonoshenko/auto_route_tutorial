@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_route_tutorial/routing/tab_wrapper_screen.dart';
 import 'package:auto_route_tutorial/screens/catalog_screen.dart';
 import 'package:auto_route_tutorial/screens/details_screen.dart';
 import 'package:auto_route_tutorial/screens/home_screen.dart';
@@ -15,11 +16,17 @@ class AppRouter extends _$AppRouter {
           initial: true,
           page: RootRoute.page,
           children: [
-            AutoRoute(path: 'users', page: HomeRoute.page, children: [
-              AutoRoute(page: DetailsRoute.page),
-            ]),
-            AutoRoute(path: 'posts', page: CatalogRoute.page),
-            AutoRoute(path: 'settings', page: ProfileRoute.page),
+            AutoRoute(
+              page: TabWrapperRoute.page,
+              children: [
+                AutoRoute(page: HomeRoute.page, initial: true),
+                AutoRoute(
+                  page: DetailsRoute.page,
+                ),
+              ],
+            ),
+            AutoRoute(page: CatalogRoute.page),
+            AutoRoute(page: ProfileRoute.page),
           ],
         ),
       ];

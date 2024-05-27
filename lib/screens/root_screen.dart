@@ -29,7 +29,7 @@ class RootScreen extends StatelessWidget {
             ),
             BottomNavigationBarItem(
               label: 'Профиль',
-              icon: Icon(Icons.supervised_user_circle),
+              icon: Icon(Icons.supervised_user_circle_outlined),
             ),
           ],
         );
