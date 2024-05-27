@@ -10,7 +10,7 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(routePage.name ?? ''),
+        title: Text('Профиль'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

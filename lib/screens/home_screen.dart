@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(routePage.name ?? ''),
+        title: Text('Главная'),
       ),
       backgroundColor: Colors.red.shade100,
       body: Column(

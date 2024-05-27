@@ -17,6 +17,7 @@ class AppRouter extends _$AppRouter {
           page: RootRoute.page,
           children: [
             AutoRoute(
+              path: '',
               page: TabWrapperRoute.page,
               children: [
                 AutoRoute(page: HomeRoute.page, initial: true),

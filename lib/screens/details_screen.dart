@@ -9,7 +9,7 @@ class DetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(routePage.name ?? ''),
+        title: Text('Детальна страница'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

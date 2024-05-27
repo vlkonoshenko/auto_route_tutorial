@@ -10,7 +10,7 @@ class CatalogScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(routePage.name ?? ''),
+        title: const Text('Каталог'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
