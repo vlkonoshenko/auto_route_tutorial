@@ -15,6 +15,12 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    CatalogNavigationRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CatalogNavigationScreen(),
+      );
+    },
     CatalogRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -58,6 +64,20 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [CatalogNavigationScreen]
+class CatalogNavigationRoute extends PageRouteInfo<void> {
+  const CatalogNavigationRoute({List<PageRouteInfo>? children})
+      : super(
+          CatalogNavigationRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CatalogNavigationRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for

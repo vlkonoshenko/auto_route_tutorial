@@ -8,32 +8,37 @@ class RootScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AutoTabsScaffold(
-      routes: const [
-        HomeRoute(),
-        CatalogRoute(),
-        ProfileRoute(),
-      ],
-      bottomNavigationBuilder: (_, tabsRouter) {
-        return BottomNavigationBar(
-          currentIndex: tabsRouter.activeIndex,
-          onTap: tabsRouter.setActiveIndex,
-          items: const [
-            BottomNavigationBarItem(
-              label: 'Главная',
-              icon: Icon(Icons.home),
+    return AutoTabsRouter.pageView(
+        routes: const [
+          HomeRoute(),
+          CatalogRoute(),
+          ProfileRoute(),
+        ],
+        builder: (context, child, pageController) {
+          final tabsRouter = AutoTabsRouter.of(context);
+          return Scaffold(
+            body: child,
+            bottomNavigationBar: BottomNavigationBar(
+              currentIndex: tabsRouter.activeIndex,
+              onTap: (index) {
+                tabsRouter.setActiveIndex(index);
+              },
+              items: const [
+                BottomNavigationBarItem(
+                  label: 'Главная',
+                  icon: Icon(Icons.home),
+                ),
+                BottomNavigationBarItem(
+                  label: 'Каталог',
+                  icon: Icon(Icons.collections),
+                ),
+                BottomNavigationBarItem(
+                  label: 'Профиль',
+                  icon: Icon(Icons.supervised_user_circle_outlined),
+                ),
+              ],
             ),
-            BottomNavigationBarItem(
-              label: 'Каталог',
-              icon: Icon(Icons.collections),
-            ),
-            BottomNavigationBarItem(
-              label: 'Профиль',
-              icon: Icon(Icons.supervised_user_circle_outlined),
-            ),
-          ],
-        );
-      },
-    );
+          );
+        });
   }
 }
