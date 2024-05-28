@@ -27,10 +27,22 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const DetailsScreen(),
       );
     },
+    HomeNavigationRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const HomeNavigationScreen(),
+      );
+    },
     HomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const HomeScreen(),
+      );
+    },
+    ProfileNavigationRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ProfileNavigationScreen(),
       );
     },
     ProfileRoute.name: (routeData) {
@@ -43,12 +55,6 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const RootScreen(),
-      );
-    },
-    TabWrapperRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: WrappedRoute(child: const TabWrapperScreen()),
       );
     },
   };
@@ -83,6 +89,20 @@ class DetailsRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [HomeNavigationScreen]
+class HomeNavigationRoute extends PageRouteInfo<void> {
+  const HomeNavigationRoute({List<PageRouteInfo>? children})
+      : super(
+          HomeNavigationRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeNavigationRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [HomeScreen]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
@@ -92,6 +112,20 @@ class HomeRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'HomeRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ProfileNavigationScreen]
+class ProfileNavigationRoute extends PageRouteInfo<void> {
+  const ProfileNavigationRoute({List<PageRouteInfo>? children})
+      : super(
+          ProfileNavigationRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ProfileNavigationRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -120,20 +154,6 @@ class RootRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'RootRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
-/// [TabWrapperScreen]
-class TabWrapperRoute extends PageRouteInfo<void> {
-  const TabWrapperRoute({List<PageRouteInfo>? children})
-      : super(
-          TabWrapperRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'TabWrapperRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
